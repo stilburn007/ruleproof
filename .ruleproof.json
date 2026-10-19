@@ -1,0 +1,13 @@
+{
+  "ignore": [
+    "examples/**",
+    "test/fixtures/**"
+  ],
+  "budget": {
+    "warning": 1200,
+    "error": 2400
+  },
+  "rules": {
+    "duplicate-instruction": "info"
+  }
+}

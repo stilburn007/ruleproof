@@ -1,0 +1,44 @@
+name: Ruleproof
+description: Audit agent instruction files for conflicts, broken references, and unsafe content.
+author: Ruleproof contributors
+branding:
+  icon: check-circle
+  color: purple
+inputs:
+  path:
+    description: Repository path to scan.
+    required: false
+    default: .
+  fail-on:
+    description: Fail on error, warning, info, or never.
+    required: false
+    default: error
+  args:
+    description: Additional Ruleproof CLI arguments.
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    - name: Annotate findings
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_ARGS: ${{ inputs.args }}
+      run: |
+        node "$GITHUB_ACTION_PATH/bin/ruleproof.js" "$INPUT_PATH" --format github --fail-on never $INPUT_ARGS
+    - name: Write job summary
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_ARGS: ${{ inputs.args }}
+      run: |
+        node "$GITHUB_ACTION_PATH/bin/ruleproof.js" "$INPUT_PATH" --format markdown --output "$GITHUB_STEP_SUMMARY" --fail-on never $INPUT_ARGS
+    - name: Enforce result
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_FAIL_ON: ${{ inputs.fail-on }}
+        INPUT_ARGS: ${{ inputs.args }}
+      run: |
+        node "$GITHUB_ACTION_PATH/bin/ruleproof.js" "$INPUT_PATH" --quiet --fail-on "$INPUT_FAIL_ON" $INPUT_ARGS

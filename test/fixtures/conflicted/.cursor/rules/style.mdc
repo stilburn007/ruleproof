@@ -1,0 +1,7 @@
+---
+description: Style rules
+alwaysApply: true
+---
+
+- Use spaces for indentation.
+- Run `make verify` after changes.

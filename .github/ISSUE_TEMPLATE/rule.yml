@@ -1,0 +1,24 @@
+name: Rule proposal
+description: Propose a new conflict, safety, or drift check.
+title: "[rule] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: failure
+    attributes:
+      label: What agent failure should this rule catch?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example instructions
+      description: Show a minimal case that should trigger the rule.
+    validations:
+      required: true
+  - type: textarea
+    id: false-positive
+    attributes:
+      label: Likely false positives
+      description: Explain cases that must not trigger the rule.

@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a false positive, false negative, or crash.
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Remove credentials and private repository content before posting.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the relevant instruction lines and command output.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Ruleproof version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Node and operating system
+      placeholder: Node 22.12, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true

@@ -1,0 +1,49 @@
+{
+  "name": "ruleproof",
+  "version": "0.1.0",
+  "description": "Find contradictory, broken, and unsafe instructions across AGENTS.md, CLAUDE.md, Cursor rules, and MCP configs.",
+  "type": "module",
+  "bin": {
+    "ruleproof": "./bin/ruleproof.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "action.yml",
+    "bin",
+    "docs/assets/ruleproof-report.png",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/ruleproof.test.js",
+    "check": "node ./bin/ruleproof.js . --fail-on error",
+    "report": "node ./bin/ruleproof.js . --format html --output ruleproof-report.html"
+  },
+  "keywords": [
+    "agents-md",
+    "claude-md",
+    "cursor",
+    "copilot",
+    "mcp",
+    "ai-agents",
+    "context-engineering",
+    "linter",
+    "developer-tools"
+  ],
+  "author": "Ruleproof contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stilburn007/ruleproof.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stilburn007/ruleproof/issues"
+  },
+  "homepage": "https://stilburn007.github.io/ruleproof/"
+}

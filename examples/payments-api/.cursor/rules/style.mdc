@@ -1,0 +1,7 @@
+---
+description: Frontend and test style
+alwaysApply: true
+---
+
+- Use spaces for indentation.
+- Run `npm test` before opening a pull request.

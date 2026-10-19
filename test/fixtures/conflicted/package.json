@@ -1,0 +1,9 @@
+{
+  "name": "conflicted-fixture",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build": "node tools/build.js",
+    "test": "node --test"
+  }
+}
