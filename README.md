@@ -4,6 +4,7 @@
 
 [![CI](https://github.com/stilburn007/ruleproof/actions/workflows/ci.yml/badge.svg)](https://github.com/stilburn007/ruleproof/actions/workflows/ci.yml)
 [![Ruleproof score](.github/ruleproof.svg)](https://github.com/stilburn007/ruleproof)
+[![Release](https://img.shields.io/github/v/release/stilburn007/ruleproof?color=1d4ed8)](https://github.com/stilburn007/ruleproof/releases)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-176b4d)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-MIT-1d4ed8)](LICENSE)
 
